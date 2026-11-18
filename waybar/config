@@ -1,0 +1,58 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 44,
+    "spacing": 6,
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "mpris"
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "network",
+        "bluetooth",
+        "pulseaudio",
+        "battery",
+        "clock",
+        "custom/power"
+    ],
+    "custom/launcher": { "format": " ", "tooltip": false, "on-click": "rofi -show drun" },
+    "custom/power": { "format": "⏻", "tooltip": false, "on-click": "~/.config/rofi/powermenu.sh" },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": { "1": "1", "2": "2", "3": "3", "4": "4", "5": "5", "active": "", "default": "" }
+    },
+    "hyprland/window": { "format": "{title}", "max-length": 40 },
+    "mpris": {
+        "format": "{player_icon} {dynamic} {status_icon}",
+        "format-paused": "{player_icon} <i>{dynamic}</i> {status_icon}",
+        "max-length": 35,
+        "dynamic-order": ["title", "artist"],
+        "player-icons": { "default": "" },
+        "status-icons": { "paused": "", "playing": "" },
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    },
+    "cpu": {
+        "format": "󰻠 {usage}%",
+        "interval": 2,
+        "on-click": "kitty -e btop"
+    },
+    "memory": {
+        "format": "󰍛 {percentage}%",
+        "interval": 2,
+        "on-click": "kitty -e btop"
+    },
+    "network": { "format-wifi": "  {essid}", "format-ethernet": "󰈀  {ifname}", "format-disconnected": "  Offline", "on-click": "nm-connection-editor" },
+    "bluetooth": { "format": " {status}", "format-disabled": " Off", "format-connected": " {device_alias}", "on-click": "blueman-manager" },
+    "pulseaudio": { "format": "{icon} {volume}%", "format-muted": " Mudo", "format-icons": { "default": ["", "", ""] }, "on-click": "pavucontrol" },
+    "battery": { "format": "{icon} {capacity}%", "format-charging": "󰂄 {capacity}%", "format-plugged": "󰚥 {capacity}%", "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"] },
+    "clock": { "format": "{:%H:%M}", "tooltip-format": "{:%H:%M}" }
+}

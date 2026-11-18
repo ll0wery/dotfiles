@@ -1,0 +1,20 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    icon-theme: "Papirus";
+    font: "JetBrainsMono Nerd Font 12";
+    drun-display-format: "{icon} {name}";
+}
+
+@theme "Arc-Dark"
+
+/* =========================================
+   Passo 3: Ajustes Visuais para o Menu de Energia
+   ========================================= */
+element-text {
+    vertical-align: 0.5;
+}
+
+element-icon {
+    size: 1.2em;
+}

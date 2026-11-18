@@ -1,0 +1,6 @@
+.cache/
+MangoHud/
+wallust/
+colors-waybar.css
+colors-kitty.conf
+*.log

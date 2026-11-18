@@ -1,0 +1,101 @@
+@import url("file:///home/l0wer/.cache/wal/colors-waybar.css");
+
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+/* ==========================================
+   BARRA COLADA NO TOPO (SEM FRESTAS)
+   ========================================== */
+window#waybar {
+    background-color: alpha(@background, 0.90); 
+    color: @foreground;
+    border-radius: 0; /* Remove os cantos arredondados */
+    margin: 0;        /* Remove as margens e cola no topo */
+    padding: 0 10px;
+}
+
+/* ==========================================
+   MÓDULOS
+   ========================================== */
+#workspaces { 
+    padding: 0; 
+    margin: 0; 
+}
+
+#workspaces button {
+    padding: 0 12px;
+    color: @color8;
+    background: transparent;
+    margin: 4px 2px;
+    border-radius: 6px;
+}
+
+#workspaces button.active {
+    color: @background;
+    background-color: @color4;
+}
+
+#window {
+    margin-left: 15px;
+    color: @foreground;
+    font-size: 15px;
+}
+
+#mpris {
+    color: @color2;
+    background-color: alpha(@color2, 0.1);
+    padding: 0 15px;
+    border-radius: 8px;
+    margin: 6px 0;
+}
+
+#custom-launcher,
+#cpu,
+#memory,
+#network,
+#bluetooth,
+#pulseaudio,
+#clock,
+#custom-power,
+#battery {
+    padding: 0 12px;
+    margin: 0 4px;
+}
+
+#cpu, 
+#memory { 
+    color: @color6; 
+}
+
+#custom-launcher { 
+    color: @color4; 
+    font-size: 24px; 
+    padding: 0 10px 0 15px; 
+}
+
+#network, 
+#bluetooth, 
+#pulseaudio { 
+    color: @color6; 
+}
+
+#clock { 
+    color: @foreground; 
+    font-weight: bold; 
+}
+
+#custom-power { 
+    color: @color1; 
+    font-size: 22px; 
+    padding-right: 15px; 
+}
+
+#battery { 
+    color: @color2; 
+}
